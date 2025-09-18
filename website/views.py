@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 def index_view(request):
-    return HttpResponse("Hello, welcome to the index page!")
-# Create your views here.
+    return render(request, 'website/index.html')
+
+def contact_view(request):
+    return render(request, 'website/contact.html')
+
+def about_view(request):
+    return render(request, 'website/about.html')
